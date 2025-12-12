@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joshua Horndt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for social icons -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- You can replace with a text logo or initials -->
+        <a href="index.html">J L H</a>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Side Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Profile section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Howdy!</p>
+          <h1 class="hero-title">Joshua Horndt</h1>
+          <p class="hero-subtitle">
+            
+            <span class="highlight">Prospective Analyst & Consultant </span>
+          </p>
+          <p class="hero-description">
+            First-Generation Texas A&M student from Eagle Lake, TX. 
+
+          </p>
+          <div class="hero-actions">
+            <a href="about.html" class="btn primary-btn">More about me</a>
+            <a href="projects.html" class="btn ghost-btn">View side projects</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrapper">
+          <!-- Replace src with your actual profile picture path -->
+          <img
+            src="Images/IMG_3709.jpeg"
+            alt="Portrait"
+            class="hero-photo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick bio section (optional extra detail on home) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why You Should Hire Me:</h2>
+        <p class="section-text">
+          I am a first-generation scholar that produces results. Whether that's through data analysis or field experience with consulting, I strive to generate value to the organization I am working for. Evidenced by my previous job, I was able to obtain/maintain <b>34%</b> profit rate from 20%, and increased client growth by <b>15%</b> within my first year consulting. I am passionate about leveraging data to drive strategic decisions and deliver impactful solutions. Alas, I produce results. 
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with social icons at the bottom of home.html -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-text">Connect with me</p>
+      <div class="social-icons">
+        <!-- GitHub -->
+        <a href="https://directory.tamu.edu/people/4f0243e6286611d662b39be0c3d93d4a/?branch=people&cn=Joshua+Horndt"
+           class="social-icon"
+           aria-label="Visit my Texas A&M Directory"
+           target="_blank"
+           rel="noopener noreferrer">
+           <img src="Images/tamu-favicon.webp" alt="TexasATM" class="social-icon-img2"/>
+        </a>
+      
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/joshua-h-8874732b3/"
+           class="social-icon"
+           aria-label="Visit my LinkedIn"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="Images/linked_in.webp" alt="LinkedIn" class="social-icon-img"/>
+        </a>
+      </div>      
+      <p class="footer-small">&copy; <span id="year"></span> Joshua L. Horndt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sets current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

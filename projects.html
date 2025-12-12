@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joshua Horndt | Side Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">J L H</a>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Side Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title">Side Projects</h1>
+        <p class="page-subtitle">
+          A collection of things I’ve built, explored, or experimented with in my spare time.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="projects-grid">
+          <!-- PROJECT CARD 1 -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img
+                src="Images/Project_Report.png"
+                alt="Screenshot of Project Recruit Report"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h2 class="project-title">Project: Recruit (SQL)</h2>
+              <p class="project-description">
+                This project analyzes over 700 Division-I recruiting records (2015–2020) using a multi-table SQL pipeline to identify the high schools that consistently produce elite college-football talent. By aggregating rankings, positions, and NFL draft outcomes across six recruiting classes, the analysis highlights the strongest national pipelines—revealing which programs most reliably generate top-150 prospects, five-star recruits, and future NFL players. The project demonstrates advanced SQL querying, data modeling, and applied sports-analytics methodology.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">Data Analytics</span>
+              </div>
+              <div class="project-links">
+                <!-- View report (PDF in modal) -->
+                <button
+                  type="button"
+                  class="btn ghost-btn small-btn project-report-open-btn"
+                  data-report-src="Project Report/Project Recruit Report (1).pdf"
+                  data-report-title="Project: Recruit — Report"
+                >
+                  <i class="fa-solid fa-file-pdf"></i>
+                  View Project Report
+                </button>
+              
+                <!-- View screenshots (4 PNGs in gallery modal) -->
+                <button
+                  type="button"
+                  class="btn small-btn project-screenshots-open-btn"
+                  data-images="Project Screenshot/TotalTop150.png,Project Screenshot/HighschoolsByPosition.png,Project Screenshot/FiveStars.png,Project Screenshot/NFLDrafted.png"
+                >
+                  <i class="fa-solid fa-images"></i>
+                  View Screenshots
+                </button>
+              </div>
+              
+            </div>
+          </article>
+          
+
+          <section class="section">
+            <div class="container">
+              <h2 class="section-title">Example Database</h2>
+              <p class="section-text">
+                This is a preview of a database I designed to create SQL scripts to analyze and map the best high schools that produce the best athletes in the nation for college football. In the main database, I have over 700 rows of data including the top 100 high school football players from the past 10 years. Due to confidentiality, I decided to only share a fraction of this data.
+              </p>
+            </div>
+          </section>
+
+            <!-- EMBEDDED PROJECT EXAMPLE -->
+        
+
+          <div class="locked-iframe-wrapper">
+            <iframe
+              class="locked-iframe"
+              src="https://tamucs-my.sharepoint.com/personal/joshua_horndt1_tamu_edu/_layouts/15/Doc.aspx?sourcedoc={4d04a9c7-f776-41b8-9f81-14d0908ed57f}&action=embedview&wdAllowInteractivity=False&ActiveCell='Sheet1'!A3&Item='Sheet1'!A3%3AK18&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"
+            ></iframe>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <div class="container footer-inner">
+      <p class="footer-small">
+        <a href="index.html" class="text-link">Back to home</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Project Report modal -->
+<div id="projectReportModal" class="resume-modal" aria-hidden="true">
+  <div class="resume-modal__backdrop"></div>
+
+  <div class="resume-modal__dialog" role="dialog" aria-modal="true" aria-label="Project report preview">
+    <header class="resume-modal__header">
+      <h2 class="resume-modal__title" id="projectReportTitle">Project Report</h2>
+      <button type="button" id="projectReportClose" class="resume-modal__close" aria-label="Close project report">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </header>
+
+    <div class="resume-modal__body">
+      <iframe
+        id="projectReportFrame"
+        src=""
+        title="Project Recruit Report PDF"
+        frameborder="0"
+      ></iframe>
+    
+
+    </div>
+
+    <footer class="resume-modal__footer">
+      <a
+        id="projectReportDownload"
+        href="#"
+        class="btn small-btn"
+        download
+      >
+        <i class="fa-solid fa-download"></i>
+        Download Report
+      </a>
+    </footer>
+  </div>
+</div>
+
+  <!-- Project Screenshots Gallery modal -->
+
+<div id="projectScreenshotsModal" class="resume-modal" aria-hidden="true">
+  <div class="resume-modal__backdrop"></div>
+
+  <div class="resume-modal__dialog" role="dialog" aria-modal="true" aria-label="Project screenshots">
+    <header class="resume-modal__header">
+      <h2 class="resume-modal__title">Project: Recruit — Screenshots</h2>
+      <button type="button" id="projectScreenshotsClose" class="resume-modal__close" aria-label="Close screenshots">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </header>
+
+    <div class="resume-modal__body project-gallery-body">
+      <img
+        id="projectScreenshotImage"
+        src=""
+        alt="Project screenshot"
+        class="project-gallery-img"
+      />
+
+      <div class="project-gallery-nav">
+        <button
+          type="button"
+          id="projectScreenshotPrev"
+          class="project-gallery-btn"
+          aria-label="Previous screenshot"
+        >
+          &lt;
+        </button>
+        <button
+          type="button"
+          id="projectScreenshotNext"
+          class="project-gallery-btn"
+          aria-label="Next screenshot"
+        >
+          &gt;
+        </button>
+      </div>
+      
+    </div>
+
+    <footer class="resume-modal__footer">
+      <p id="projectScreenshotCaption" class="project-gallery-caption">
+        Screenshot 1 of 4
+      </p>
+    </footer>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

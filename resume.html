@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joshua Horndt | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">J L H</a>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Side Projects</a>
+        <a href="resume.html" class="nav-link active">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title">Resume(s)</h1>
+        <p class="page-subtitle">
+          Feel free to look through my impressive resumes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="resume-grid">
+           <!-- Analytics resume card -->
+<article class="resume-card">
+    <div class="resume-image-wrapper">
+      <img
+        src="Resume/analytics-screenshot.png"
+        alt="Screenshot of Analytics Resume"
+        class="resume-image"
+      />
+    </div>
+    <div class="resume-content">
+      <h2 class="resume-title">Analytics Resume</h2>
+      <p class="resume-description">
+        This is my official resume showcasing my skills, education, and experience in the related fields of analytics. 
+      </p>
+      <div class="resume-tags">
+        <span class="resume-tag">Analyst</span>
+      </div>
+      <div class="resume-links">
+        <button
+          type="button"
+          class="btn ghost-btn small-btn resume-open-btn"
+          data-resume-src="Resume/Analytics Resume.pdf"
+          data-resume-title="Analytics Resume"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+          View Resume
+        </button>
+      </div>
+    </div>
+  </article>
+  
+  <!-- Consulting resume card -->
+  <article class="resume-card">
+    <div class="resume-image-wrapper">
+      <img
+        src="Resume/consulting-screenshot.png"
+        alt="Screenshot of Consulting Resume"
+        class="resume-image"
+      />
+    </div>
+    <div class="resume-content">
+      <h2 class="resume-title">Consulting Resume</h2>
+      <p class="resume-description">
+        This is my official resume showcasing my skills, customer relations, education, and experience in the related fields of consulting. 
+      </p>
+      <div class="resume-tags">
+        <span class="resume-tag">Consulting</span>
+      </div>
+      <div class="resume-links">
+        <button
+          type="button"
+          class="btn ghost-btn small-btn resume-open-btn"
+          data-resume-src="Resume/Consulting Resume.pdf"
+          data-resume-title="Consulting Resume"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+          View Resume
+        </button>
+      </div>
+    </div>
+  </article> 
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <div class="container footer-inner">
+      <p class="footer-small">
+        <a href="index.html" class="text-link">Back to home</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- SINGLE resume modal (only this one) -->
+  <div id="resumeModal" class="resume-modal" aria-hidden="true">
+    <div class="resume-modal__backdrop"></div>
+  
+    <div class="resume-modal__dialog" role="dialog" aria-modal="true" aria-label="Resume preview">
+      <header class="resume-modal__header">
+        <h2 class="resume-modal__title" id="resumeModalTitle">Resume</h2>
+        <button type="button" id="closeResumeBtn" class="resume-modal__close" aria-label="Close resume">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
+  
+      <div class="resume-modal__body">
+        <iframe
+          id="resumeFrame"
+          src=""
+          title="Resume PDF"
+          frameborder="0"
+        ></iframe>
+      </div>
+  
+      <footer class="resume-modal__footer">
+        <a
+          id="resumeDownload"
+          href="#"
+          class="btn small-btn"
+          download
+        >
+          <i class="fa-solid fa-download"></i>
+          Download PDF
+        </a>
+      </footer>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
